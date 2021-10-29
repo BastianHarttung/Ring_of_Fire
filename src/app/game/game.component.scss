@@ -1,0 +1,29 @@
+.game-section {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  z-index: -10;
+}
+
+.card-stack {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  img {
+    position: absolute;
+    //left: 10% - 15%;
+    bottom: 10%;
+    width: 160px;
+    filter: drop-shadow(-5px 4px 5px rgba(33, 33, 33, 0.6));
+  }
+}

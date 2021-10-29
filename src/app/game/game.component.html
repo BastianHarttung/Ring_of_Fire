@@ -1,1 +1,16 @@
-<p>game works!</p>
+<section class="game-section">
+
+  <img class="background-image" src="assets/img/bg-whiskey.jpg">
+
+  <div class="card-stack">
+
+    <img *ngFor="let card of [0,1,2,3,4,5]; let i = index;" [ngStyle]="{'left.%': i/4 + 10, 'bottom.%': i/4+10}"
+         src="/assets/img/cards/cover_card.png" alt="Cards">
+
+  </div>
+
+</section>
+
+
+
+
