@@ -7,8 +7,21 @@
   align-items: center;
   max-width: 100%;
   overflow: hidden;
+  position: relative;
+
   img {
     object-fit: cover;
     object-position: center;
+  }
+}
+
+.start-btn {
+  width: 200px;
+  position: absolute;
+  top: 390px;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(1.3);
   }
 }
