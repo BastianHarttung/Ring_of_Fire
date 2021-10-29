@@ -1,3 +1,14 @@
 .start-screen {
-  background-color: #1b0801;
+  background-color: #261002;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+  img {
+    object-fit: cover;
+    object-position: center;
+  }
 }
