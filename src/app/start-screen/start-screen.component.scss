@@ -9,7 +9,9 @@
   overflow: hidden;
   position: relative;
 
-  img {
+  img:nth-child(0) {
+    width: 100vw;
+    height: auto;
     object-fit: cover;
     object-position: center;
   }
@@ -18,7 +20,9 @@
 .start-btn {
   width: 200px;
   position: absolute;
-  top: 390px;
+  top: 30%;
+  bottom: 0;
+  border-radius: 50%;
   cursor: pointer;
 
   &:hover {
