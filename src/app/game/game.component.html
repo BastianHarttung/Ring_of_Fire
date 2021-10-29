@@ -4,10 +4,10 @@
 
   <div class="card-stack">
 
-    <img *ngFor="let card of [0,1,2,3,4,5]; let i = index;" [ngStyle]="{'left.%': i/4 + 10, 'bottom.%': i/4+10}"
-         src="/assets/img/cards/cover_card.png" alt="Cards">
-
-  </div>
+    <img *ngFor="let card of [0,1,2,3,4]; let i = index;" [ngStyle]="{'left.%': i/4 + 10, 'bottom.%': i/4+10}"
+         src="/assets/img/cards/back_jokerfire.png" alt="Cards">
+    <img class="top-card" style= "left: 11.25%; bottom: 11.25%"
+         (click)="takeCard()" [class.pick-card]="pickCardAnimation" src="/assets/img/cards/back_jokerfire.png" alt="Cards">  </div>
 
 </section>
 

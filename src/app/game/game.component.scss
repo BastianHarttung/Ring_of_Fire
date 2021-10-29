@@ -19,11 +19,26 @@
   width: 100%;
   height: 100%;
   position: relative;
+
   img {
     position: absolute;
     //left: 10% - 15%;
     bottom: 10%;
-    width: 160px;
+    width: 200px;
     filter: drop-shadow(-5px 4px 5px rgba(33, 33, 33, 0.6));
   }
+}
+
+.top-card {
+  cursor: pointer;
+  transition: all 120ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.01) translateX(5px) translateY(-5px);
+  }
+}
+
+.pick-card {
+  transition: all 325ms ease-in-out;
+  transform: scale(1.03) translate3d(240px,-220px, -10px) rotateZ(45deg) !important;
 }
