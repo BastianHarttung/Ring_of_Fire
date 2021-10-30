@@ -34,11 +34,28 @@
   transition: all 120ms ease-in-out;
 
   &:hover {
-    transform: scale(1.01) translateX(5px) translateY(-5px);
+    transform: scale(1.02) translateX(5px) translateY(-5px);
   }
 }
 
 .pick-card {
   transition: all 325ms ease-in-out;
-  transform: scale(1.03) translate3d(240px,-220px, -10px) rotateZ(45deg) !important;
+  animation: pick-card-animation 1500ms ease-in-out;
+  transform: scale(1) translate(0px, -300px) rotateZ(-70deg)  !important;
+  /*filter: drop-shadow(5px -4px 5px rgba(33, 33, 33, 0.6)) !important;*/
+}
+
+@keyframes pick-card-animation {
+  0% {
+    transform: scale(1.02) translate(5px, -5px);
+  }
+  20% {
+    transform: scale(1.05) translate(5px, -5px) ;
+  }
+  50% {
+    transform: scale(1.05) translate(5px, -5px);
+  }
+  100% {
+    transform: scale(1) translate(0px, -300px) rotateZ(-70deg);
+  }
 }

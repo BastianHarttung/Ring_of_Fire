@@ -6,8 +6,14 @@
 
     <img *ngFor="let card of [0,1,2,3,4]; let i = index;" [ngStyle]="{'left.%': i/4 + 10, 'bottom.%': i/4+10}"
          src="/assets/img/cards/back_jokerfire.png" alt="Cards">
-    <img class="top-card" style= "left: 11.25%; bottom: 11.25%"
-         (click)="takeCard()" [class.pick-card]="pickCardAnimation" src="/assets/img/cards/back_jokerfire.png" alt="Cards">  </div>
+    <img class="top-card" style="left: 11.25%; bottom: 11.25%"
+         (click)="takeCard()"  src="/assets/img/cards/back_jokerfire.png"
+         alt="Cards-Back">
+    <img class="pick-card" style="left: 11.25%; bottom: 11.25%"
+         *ngIf="showFront" src="/assets/img/cards/clubs_1.png"
+         alt="Card">
+
+  </div>
 
 </section>
 
