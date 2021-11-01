@@ -29,14 +29,13 @@ export class GameComponent implements OnInit {
   takeCard() {
 
     if (!this.pickCardAnimation) {
+
       this.playedCard = this.game.stack.pop();
+      this.showFront = true;
       this.game.playedCards.push(this.playedCard);
 
-      //console.log(this.game.playedCards)
-      //console.log(this.game.stack)
-
       this.pickCardAnimation = true
-      this.showFront = true;
+
       setTimeout(() => {
         this.pickCardAnimation = false
       }, 1500)

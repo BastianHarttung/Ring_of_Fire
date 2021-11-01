@@ -40,9 +40,12 @@
 
 .pick-card {
   transition: all 325ms ease-in-out;
-  animation: pick-card-animation 1500ms ease-in-out;
-  transform: scale(1) translate(0px, -300px) rotateZ(-70deg)  !important;
+  transform: scale(1) translate(0px, -310px) rotateZ(-70deg)  !important;
   /*filter: drop-shadow(5px -4px 5px rgba(33, 33, 33, 0.6)) !important;*/
+}
+
+.pick-card-animation {
+  animation: pick-card-animation 1500ms ease-in-out;
 }
 
 @keyframes pick-card-animation {
@@ -50,12 +53,12 @@
     transform: scale(1.02) translate(5px, -5px);
   }
   20% {
-    transform: scale(1.05) translate(5px, -5px) ;
+    transform: scale(1.2) translate(5px, -5px) ;
   }
   50% {
-    transform: scale(1.05) translate(5px, -5px);
+    transform: scale(1.2) translate(5px, -5px);
   }
   100% {
-    transform: scale(1) translate(0px, -300px) rotateZ(-70deg);
+    transform: scale(1) translate(0px, -310px) rotateZ(-70deg);
   }
 }

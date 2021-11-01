@@ -10,7 +10,7 @@
     <img class="top-card" style="left: 11.25%; bottom: 11.25%"
          (click)="takeCard()" src="/assets/img/cards/back_jokerfire.png"
          alt="Cards-Back">
-    <img class="pick-card" style="left: 11.25%; bottom: 11.25%"
+    <img class="pick-card" [ngClass]="{'pick-card-animation': pickCardAnimation }" style="left: 11.25%; bottom: 11.25%"
          *ngIf="showFront" src="/assets/img/cards/{{ playedCard }}.png"
          alt="Card">
 
