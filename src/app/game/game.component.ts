@@ -8,6 +8,7 @@ import {Game} from 'src/models/game'
 })
 export class GameComponent implements OnInit {
 
+  playedCard: any = '';
   pickCardAnimation: boolean = false;
   showFront: boolean = false;
   game: Game = new Game;
@@ -27,8 +28,19 @@ export class GameComponent implements OnInit {
 
   takeCard() {
 
-    this.pickCardAnimation = true
-    this.showFront = true;
+    if (!this.pickCardAnimation) {
+      this.playedCard = this.game.stack.pop();
+      this.game.playedCards.push(this.playedCard);
+
+      //console.log(this.game.playedCards)
+      //console.log(this.game.stack)
+
+      this.pickCardAnimation = true
+      this.showFront = true;
+      setTimeout(() => {
+        this.pickCardAnimation = false
+      }, 1500)
+    }
   }
 
 }
