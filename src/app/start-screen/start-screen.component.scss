@@ -1,4 +1,4 @@
-.start-screen {
+.start-screen-container {
   background-color: #261002;
   width: 100vw;
   height: 100vh;
@@ -9,18 +9,24 @@
   overflow: hidden;
   position: relative;
 
-  img:nth-child(0) {
-    width: 100vw;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-  }
+}
+
+.start-screen{
+  position: relative;
+}
+
+.start-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
 }
 
 .start-btn {
   width: 200px;
   position: absolute;
-  top: 30%;
+  top: 31%;
+  left: 42.5%;
   bottom: 0;
   border-radius: 50%;
   cursor: pointer;
