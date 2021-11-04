@@ -10,7 +10,6 @@ export class GameComponent implements OnInit {
 
   playedCard: any = '';
   pickCardAnimation: boolean = false;
-  showFront: boolean = false;
   game: Game = new Game;
 
   constructor() {
@@ -31,12 +30,11 @@ export class GameComponent implements OnInit {
     if (!this.pickCardAnimation) {
 
       this.playedCard = this.game.stack.pop();
-      this.showFront = true;
-      this.game.playedCards.push(this.playedCard);
 
       this.pickCardAnimation = true
 
       setTimeout(() => {
+        this.game.playedCards.push(this.playedCard);
         this.pickCardAnimation = false
       }, 1500)
     }

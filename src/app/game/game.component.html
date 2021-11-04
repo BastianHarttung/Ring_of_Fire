@@ -13,7 +13,7 @@
     <img class="discard-stack "
          style="left: 11.25%; bottom: 11.25%"
          *ngFor=" let card of game.playedCards; let i = index;"
-         src="/assets/img/cards/{{game.playedCards[i-1]||card}}.png">
+         src="/assets/img/cards/{{game.playedCards[i]||card}}.png">
 
     <!--// Top Card zum abheben-->
     <img class="top-card" style="left: 11.25%; bottom: 11.25%"
@@ -23,7 +23,7 @@
     <!--// Karte die gelegt wird-->
     <img class="pick-card" [ngClass]="{'pick-card-animation': pickCardAnimation }"
          style="left: 11.25%; bottom: 11.25%"
-         *ngIf="showFront" src="/assets/img/cards/{{ playedCard }}.png"
+         *ngIf="pickCardAnimation" src="/assets/img/cards/{{ playedCard }}.png"
          alt="Card">
 
   </div>
