@@ -1,7 +1,7 @@
 .player-section {
   position: absolute;
   right: 0;
-  top: 15%;
+  //top: 15%;
 }
 
 .game-section {
@@ -21,6 +21,7 @@
   z-index: -10;
 }
 
+// --------------------Cards
 .card-stack {
   width: 100%;
   height: 100%;
@@ -75,4 +76,15 @@
 .discard-stack {
   transform: scale(1) translate(0px, -320px) rotateZ(-70deg);
   filter: drop-shadow(-5px 4px 5px rgba(33, 33, 33, 0.6));
+}
+
+//----------------Button to add Player
+.button-plus {
+  position: absolute;
+  top: 40px;
+  right: 8%;
+  background-color: var(--yellow-bright);
+  &:hover {
+    background-color: var(--yellow);
+  }
 }

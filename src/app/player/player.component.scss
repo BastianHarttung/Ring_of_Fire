@@ -2,21 +2,21 @@
 .player-container {
   background-color: wheat;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-family: sans-serif;
-
-  padding-right: 100px;
+  padding-right: 40px;
   border-radius: 50px 0px 0px 50px;
   box-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+  min-width: 240px;
   img {
-    width: 100px;
+    width: 80px;
     filter: drop-shadow(3px 0px 5px rgba(0,0,0,0.2));
   }
   p {
     color: black;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
-    margin-left: 15px;
+    margin: 0px 0px 0px 15px;
   }
 }

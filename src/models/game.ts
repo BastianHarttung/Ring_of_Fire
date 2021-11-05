@@ -1,5 +1,13 @@
 export class Game {
-  public players: string[] = [];
+  public players: object[] = [
+    { name: 'Kunibert',
+    pic: 'Profile_Drunk01.png'},
+    { name: 'Maurelius',
+      pic: 'Profile_Drunk02.png'},
+    { name: 'Franz',
+      pic: 'Profile_Drunk03.png'},
+  ];
+
   public stack: string[] = [];
   public playedCards: string[] = [];
   public currentPlayer: number = 0;

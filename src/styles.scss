@@ -6,4 +6,9 @@
 :root {
   --main-color: #e67612;
   --main-color-bright: #f6a156;
+  --yellow: #FBD473;
+  --yellow-bright: #F5DEB3;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
