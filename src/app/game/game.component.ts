@@ -46,8 +46,10 @@ export class GameComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+    dialogRef.afterClosed().subscribe((playername:string) => {   // playername ist der String, der in das Inputfeld von Dialog-add-player eingegeben wurde.
+      const randomPic = Math.round(1+ Math.random() *3)
+      const newPlayer = {name: playername, pic: `Profile_Drunk0${randomPic}.png`}
+      this.game.players.push(newPlayer)
     });
   }
 

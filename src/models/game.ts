@@ -1,11 +1,7 @@
 export class Game {
   public players: object[] = [
-    { name: 'Kunibert',
-    pic: 'Profile_Drunk01.png'},
-    { name: 'Maurelius',
-      pic: 'Profile_Drunk02.png'},
-    { name: 'Franz',
-      pic: 'Profile_Drunk03.png'},
+    /*{ name: 'Player 1',
+    pic: 'Profile_Drunk01.png'}*/
   ];
 
   public stack: string[] = [];
