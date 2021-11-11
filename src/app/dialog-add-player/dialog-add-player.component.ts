@@ -15,6 +15,7 @@ export class DialogAddPlayerComponent implements OnInit {
   }
 
   onNoClick() {
+    //TODO
     console.log('Dann halt nicht')
   }
 }

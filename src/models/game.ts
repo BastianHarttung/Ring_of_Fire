@@ -1,12 +1,23 @@
 export class Game {
   public players: object[] = [
-    /*{ name: 'Player 1',
-    pic: 'Profile_Drunk01.png'}*/
+    {
+      name: 'Player 1',
+      pic: 'Profile_Drunk01.png'
+    },
+    {
+      name: 'Player 2',
+      pic: 'Profile_Drunk02.png'
+    },
+    {
+      name: 'Player 3',
+      pic: 'Profile_Drunk03.png'
+    }
   ];
 
   public stack: string[] = [];
   public playedCards: string[] = [];
   public currentPlayer: number = 0;
+  public lastPlayer: number = -1;
 
   constructor() {
     for (let i = 1; i < 14; i++) {
