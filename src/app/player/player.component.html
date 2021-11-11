@@ -3,6 +3,7 @@
   <div class="player-container" [class.player-active]="playerActive">
     <img src="assets/img/profiles/{{player.pic}}">
     <p>{{player.name}}</p>
+    <img class="user-delete-btn" (click)="deletePlayer()" src="assets/img/logos/user-slash.svg">
   </div>
 
 </section>

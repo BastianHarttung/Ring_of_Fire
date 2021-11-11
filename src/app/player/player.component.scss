@@ -2,13 +2,14 @@
 .player-container {
   background-color: rgb(245, 222, 179, 0.8);
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   font-family: sans-serif;
   padding-right: 15px;
   border-radius: 50px 0px 0px 50px;
   box-shadow: 3px 3px 10px rgba(0,0,0,0.6);
-  min-width: 200px;
+  min-width: 220px;
+  transition: 200ms;
   img {
     width: 50px;
     filter: drop-shadow(3px 0px 5px rgba(0,0,0,0.2));
@@ -21,8 +22,14 @@
   }
 }
 
+.user-delete-btn {
+  height: 15px;
+  cursor: pointer;
+}
+
+
 //Class that has been added if player is active
 .player-active {
-  transform: scale(1.32) translateX(-26px);
+  transform: scale(1.32) translateX(-29px);
   background-color: wheat;
 }

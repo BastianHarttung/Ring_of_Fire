@@ -31,10 +31,13 @@
 </section>
 
 
-<app-player *ngFor="let player of game.players, let i = index" [ngStyle]="{'top.px': 120+ (i * 70) }"
-            [playerActive]="i == game.currentPlayer"
-            [player]="player"
-            class="player-section"></app-player>
+  <app-player *ngFor="let player of game.players, let i = index" [ngStyle]="{'top.px': 120+ (i * 70) }"
+              [playerActive]="i == game.currentPlayer"
+              [player]="player"
+              [game]="game"
+              class="player-section">
+  </app-player>
+
 
 <button class="button-plus" (click)="openDialog()" mat-fab color="accent">
   <mat-icon>person_add</mat-icon>
