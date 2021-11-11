@@ -1,16 +1,16 @@
 
 .player-container {
-  background-color: wheat;
+  background-color: rgb(245, 222, 179, 0.8);
   display: flex;
   justify-content: flex-start;
   align-items: center;
   font-family: sans-serif;
-  padding-right: 40px;
+  padding-right: 15px;
   border-radius: 50px 0px 0px 50px;
   box-shadow: 3px 3px 10px rgba(0,0,0,0.6);
-  min-width: 240px;
+  min-width: 200px;
   img {
-    width: 80px;
+    width: 50px;
     filter: drop-shadow(3px 0px 5px rgba(0,0,0,0.2));
   }
   p {
@@ -19,4 +19,9 @@
     font-weight: 600;
     margin: 0px 0px 0px 15px;
   }
+}
+
+.player-active {
+  transform: scale(1.32) translateX(-26px);
+  background-color: wheat;
 }

@@ -32,7 +32,8 @@
 </section>
 
 
-<app-player *ngFor="let player of game.players, let i = index" [ngStyle]="{'top.px': 120+ (i *100) }"
+<app-player *ngFor="let player of game.players, let i = index" [ngStyle]="{'top.px': 120+ (i * 80) }"
+            [playerActive]= "i == game.currentPlayer"
             [player]="player"
             class="player-section"></app-player>
 
