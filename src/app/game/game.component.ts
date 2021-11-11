@@ -54,7 +54,9 @@ export class GameComponent implements OnInit {
     dialogRef.afterClosed().subscribe((playername: string) => {   // playername ist der String, der in das Inputfeld von Dialog-add-player eingegeben wurde.
       const randomPic = Math.round(1 + Math.random() * 3)
       const newPlayer = {name: playername, pic: `Profile_Drunk0${randomPic}.png`}
-      this.game.players.push(newPlayer)
+      if (playername && playername.length > 0) {
+        this.game.players.push(newPlayer)
+      }
     });
   }
 

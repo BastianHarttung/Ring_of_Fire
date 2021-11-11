@@ -8,5 +8,5 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Nein, Danke</button>
-  <button mat-button [mat-dialog-close]="name" cdkFocusInitial>Okay</button>
+  <button mat-button [disabled]="name.length == 0" [mat-dialog-close]="name" cdkFocusInitial>Okay</button>
 </div>

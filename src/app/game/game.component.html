@@ -31,7 +31,7 @@
 </section>
 
 
-<app-player *ngFor="let player of game.players, let i = index" [ngStyle]="{'top.px': 120+ (i * 80) }"
+<app-player *ngFor="let player of game.players, let i = index" [ngStyle]="{'top.px': 120+ (i * 70) }"
             [playerActive]="i == game.currentPlayer"
             [player]="player"
             class="player-section"></app-player>
@@ -41,7 +41,7 @@
 </button>
 
 
-<app-game-description [card]="playedCard" [game] ="game" class="game-description-component"></app-game-description>
+<app-game-description [card]="playedCard" [game]="game" class="game-description-component"></app-game-description>
 
 
 

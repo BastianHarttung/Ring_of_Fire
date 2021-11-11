@@ -93,6 +93,9 @@ export class GameDescriptionComponent implements OnInit, OnChanges {
   subtitle: string = '';
   description: string = '';
 
+  firstCardIsPlayed:boolean = false;
+
+
   @Input() card: any;
   @Input() game:any;
 
@@ -104,14 +107,12 @@ export class GameDescriptionComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    console.log('CurrentCard: ' + this.card)
-    console.log('Current number ', +this.card.split('_')[1])
-    console.log('game ' , this.game)
 
     if (this.card) {
       const cardNumber: number = +this.card.split('_')[1];
       setTimeout(() => {
-        this.setInfosForCard(cardNumber)
+        this.setInfosForCard(cardNumber);
+        this.firstCardIsPlayed = true
       }, 1500)
     }
   }
@@ -120,7 +121,6 @@ export class GameDescriptionComponent implements OnInit, OnChanges {
     this.title = this.cardAction[cardNumber - 1].title;
     this.subtitle = this.cardAction[cardNumber - 1].subtitle;
     this.description = this.cardAction[cardNumber - 1].description;
-    return true
   }
 
 }
