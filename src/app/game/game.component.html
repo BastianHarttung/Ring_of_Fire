@@ -45,4 +45,6 @@
 
 <app-game-description [card]="game.playedCard" [game]="game" class="game-description-component"></app-game-description>
 
-<div *ngIf="game.cardsPlayed === 52"> Spiel zu Ende.</div>
+<div *ngIf="game.cardsPlayed === 52" class="game-over-screen">
+  <h1 class="game-over-text">Spiel ist zu Ende.</h1>
+</div>

@@ -47,7 +47,7 @@ export class GameComponent implements OnInit {
 
   takeCard() {
 
-    if (!this.game.pickCardAnimation && this.game.cardsPlayed < 52) {
+    if (!this.game.pickCardAnimation && this.game.cardsPlayed < 52 && this.game.players.length > 0) {
 
       this.game.playedCard = this.game.stack.pop();
       this.game.pickCardAnimation = true
