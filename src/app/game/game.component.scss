@@ -78,11 +78,25 @@
 
 //----------------Button to add Player--------------------------------
 
+/*.button-cardinfo-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 0 25px;
+  }
+}*/
+
 .button-plus {
   position: absolute;
   top: 40px;
-  right: 8%;
+  right: 7%;
   background-color: var(--yellow-bright);
+
   &:hover {
     background-color: var(--yellow);
   }
@@ -90,7 +104,6 @@
 
 
 //--------------------Player section---------------------------------
-
 
 
 .player-section {

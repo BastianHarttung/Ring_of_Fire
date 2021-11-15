@@ -2,6 +2,11 @@
   <mat-card-title>{{firstCardIsPlayed ? title : "Bitte Player hinzufügen und eine Karte nehmen."}}</mat-card-title>
   <mat-card-subtitle class="short-description">{{subtitle}}</mat-card-subtitle>
   <mat-card-content>{{description}}</mat-card-content>
-  <mat-card-subtitle>{{firstCardIsPlayed ? game.players[game.lastPlayer].name+"'s Aufgabe" : ''}}</mat-card-subtitle>
+
+  <div class="task-cardsplayed-container">
+    <mat-card-subtitle>{{firstCardIsPlayed ? game.players[game.lastPlayer].name+"'s Aufgabe" : ''}}</mat-card-subtitle>
+    <mat-card-subtitle>{{game.cardsPlayed > 0 ? game.cardsPlayed + " Karten gespielt" : ""}}</mat-card-subtitle>
+  </div>
+
 </mat-card>
 

@@ -15,8 +15,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class GameComponent implements OnInit {
 
-  playedCard: any = '';
-  pickCardAnimation: boolean = false;
+
   game: Game = new Game;
   gameId:string = '';
 
@@ -34,35 +33,36 @@ export class GameComponent implements OnInit {
         .doc(this.gameId)
         .valueChanges()
         .subscribe((game:any) =>{
-          console.log('Game update', game);
+          //console.log('Game update', game);
           this.game.players = game.players;
           this.game.stack = game.stack;
           this.game.playedCards = game.playedCards;
           this.game.currentPlayer = game.currentPlayer;
-          this.game.lastPlayer = game.lastPlayer;});
+          this.game.lastPlayer = game.lastPlayer;
+          this.game.playedCard = game.playedCard;
+          this.game.pickCardAnimation = game.pickCardAnimation;
+          this.game.cardsPlayed = game.cardsPlayed});
     })
   }
 
   takeCard() {
 
-    if (!this.pickCardAnimation) {
+    if (!this.game.pickCardAnimation && this.game.cardsPlayed < 52) {
 
-      this.playedCard = this.game.stack.pop();
+      this.game.playedCard = this.game.stack.pop();
+      this.game.pickCardAnimation = true
       this.saveGameToDB();
-      this.pickCardAnimation = true
 
       setTimeout(() => {
         this.game.lastPlayer = this.game.currentPlayer;
         this.game.currentPlayer++;
         this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
+        this.game.playedCards.push(this.game.playedCard);
+        this.game.pickCardAnimation = false;
+        this.game.cardsPlayed ++;
         this.saveGameToDB();
       }, 1500)
 
-      setTimeout(() => {
-        this.game.playedCards.push(this.playedCard);
-        this.saveGameToDB();
-        this.pickCardAnimation = false
-      }, 1500)
     }
   }
 

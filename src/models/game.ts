@@ -19,6 +19,11 @@ export class Game {
   public currentPlayer: number = 0;
   public lastPlayer: number = -1;
 
+  public playedCard: any = '';
+  public pickCardAnimation: boolean = false;
+
+  public cardsPlayed:number = 0;
+
   constructor() {
     for (let i = 1; i < 14; i++) {
       this.stack.push('clubs_' + i);
@@ -35,7 +40,10 @@ export class Game {
       stack: this.stack,
       playedCards: this.playedCards,
       currentPlayer: this.currentPlayer,
-      lastPlayer: this.lastPlayer
+      lastPlayer: this.lastPlayer,
+      playedCard: this.playedCard,
+      pickCardAnimation: this.pickCardAnimation,
+      cardsPlayed: this.cardsPlayed
     }
   }
 }

@@ -21,9 +21,9 @@
          alt="Cards-Back">
 
     <!--// Karte die gelegt wird-->
-    <img class="pick-card" [ngClass]="{'pick-card-animation': pickCardAnimation }"
+    <img class="pick-card" [ngClass]="{'pick-card-animation': game.pickCardAnimation }"
          style="left: 11.25%; bottom: 11.25%"
-         *ngIf="pickCardAnimation" src="assets/img/cards/{{ playedCard }}.png"
+         *ngIf="game.pickCardAnimation" src="assets/img/cards/{{ game.playedCard }}.png"
          alt="Card">
 
   </div>
@@ -31,21 +31,18 @@
 </section>
 
 
-  <app-player *ngFor="let player of game.players, let i = index" [ngStyle]="{'top.px': 120+ (i * 70) }"
-              [playerActive]="i == game.currentPlayer"
-              [player]="player"
-              [game]="game"
-              class="player-section">
-  </app-player>
+<app-player *ngFor="let player of game.players, let i = index" [ngStyle]="{'top.px': 120+ (i * 70) }"
+            [playerActive]="i == game.currentPlayer"
+            [player]="player"
+            [game]="game"
+            class="player-section">
+</app-player>
 
 
 <button class="button-plus" (click)="openDialog()" mat-fab color="accent">
   <mat-icon>person_add</mat-icon>
 </button>
 
+<app-game-description [card]="game.playedCard" [game]="game" class="game-description-component"></app-game-description>
 
-<app-game-description [card]="playedCard" [game]="game" class="game-description-component"></app-game-description>
-
-
-
-
+<div *ngIf="game.cardsPlayed === 52"> Spiel zu Ende.</div>
