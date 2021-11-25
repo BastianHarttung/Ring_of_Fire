@@ -4,8 +4,8 @@
   <mat-card-content>{{description}}</mat-card-content>
 
   <div class="task-cardsplayed-container">
-    <mat-card-subtitle>{{firstCardIsPlayed && game.players.length > 0 ? game.players[game.lastPlayer].name+"'s Aufgabe" : ''}}</mat-card-subtitle>
-    <mat-card-subtitle>{{game.cardsPlayed > 0 ? game.cardsPlayed + " Karten gespielt" : ""}}</mat-card-subtitle>
+    <mat-card-subtitle class="mat-card-subtitle">{{firstCardIsPlayed && game.players.length > 0 ? game.players[game.lastPlayer].name+"'s Aufgabe" : ''}}</mat-card-subtitle>
+    <mat-card-subtitle class="mat-card-subtitle">{{game.cardsPlayed > 0 ? game.cardsPlayed + " Karten gespielt" : ""}}</mat-card-subtitle>
   </div>
 
 </mat-card>

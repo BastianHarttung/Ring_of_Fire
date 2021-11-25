@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Game} from 'src/models/game';
 
 import {MatDialog} from '@angular/material/dialog';
@@ -18,6 +18,8 @@ export class GameComponent implements OnInit {
 
   game: Game = new Game;
   gameId:string = '';
+  windowWidth:number = window.innerWidth;
+
 
   constructor(private route: ActivatedRoute,
               private firestore: AngularFirestore,
@@ -26,6 +28,7 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
     this.game = new Game();
+    console.log(this.windowWidth)
 
     this.route.params.subscribe((params) => {
       this.gameId = params.id;
@@ -43,6 +46,11 @@ export class GameComponent implements OnInit {
           this.game.pickCardAnimation = game.pickCardAnimation;
           this.game.cardsPlayed = game.cardsPlayed});
     })
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.windowWidth = window.innerWidth;
   }
 
   takeCard() {

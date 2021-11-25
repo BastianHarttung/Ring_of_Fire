@@ -5,18 +5,24 @@
   <div class="card-stack">
 
     <img class="stack" *ngFor="let card of [0,1,2,3,4]; let i = index;"
-         [ngStyle]="{'left.%': i/4 + 10, 'bottom.%': i/4+10}"
+         [ngStyle]="windowWidth > 700 ?
+                { 'left.%': i/4 + 10, 'bottom.%': i/4 + 10}
+                :{ 'left.%': i/4 + 5, 'bottom.%': i/4 + 25} "
          src="assets/img/cards/back_jokerfire.png" alt="Cards">
 
 
     <!--// Ablagestapel-->
     <img class="discard-stack "
-         style="left: 11.25%; bottom: 11.25%"
+         [ngStyle]="windowWidth > 700 ?
+                  {'left.%': 11.25, 'bottom.%': 11.25}
+                  : {'left.%': 7.25, 'bottom.%': 18.25}"
          *ngFor=" let card of game.playedCards; let i = index;"
          src="assets/img/cards/{{game.playedCards[i]||card}}.png">
 
     <!--// Top Card zum abheben-->
-    <img class="top-card" style="left: 11.25%; bottom: 11.25%"
+    <img class="top-card" [ngStyle]="windowWidth > 700 ?
+                  {'left.%': 11.25, 'bottom.%': 11.25}
+                  : {'left.%': 6.25, 'bottom.%': 26.25}"
          (click)="takeCard()" src="assets/img/cards/back_jokerfire.png"
          alt="Cards-Back">
 
