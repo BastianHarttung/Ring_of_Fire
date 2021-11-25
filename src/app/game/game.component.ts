@@ -28,7 +28,6 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
     this.game = new Game();
-    console.log(this.windowWidth)
 
     this.route.params.subscribe((params) => {
       this.gameId = params.id;

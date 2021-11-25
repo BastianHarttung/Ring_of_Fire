@@ -24,7 +24,7 @@
   img {
     position: absolute;
     //left: 10% - 15%;
-    bottom: 10%;
+    /*bottom: 10%;*/
     width: 200px;
   }
 }
@@ -94,7 +94,6 @@
 
 //--------------------Player section---------------------------------
 
-
 .player-section {
   position: absolute;
   right: 0;
@@ -133,5 +132,36 @@
     img {
       width: 150px;
     }
+  }
+
+  .discard-stack {
+    transform: scale(1) translate(0px, -255px) rotateZ(-70deg);
+  }
+
+  .pick-card {
+    transform: scale(1) translate(0px, -255px) rotateZ(-70deg) !important;
+  }
+
+  @keyframes pick-card-animation {
+    0% {
+      transform: scale(1.02) translate(5px, -5px);
+    }
+    20% {
+      transform: scale(1.2) translate(5px, -5px);
+    }
+    50% {
+      transform: scale(1.2) translate(5px, -5px);
+    }
+    100% {
+      transform: scale(1) translate(0px, -255px) rotateZ(-70deg);
+    }
+  }
+
+}
+
+@media (max-width: 450px) {
+  .game-description-component {
+    bottom: 20px;
+    right: 20px;
   }
 }

@@ -33,3 +33,21 @@
   transform: scale(1.32) translateX(-29px);
   background-color: wheat;
 }
+
+@media (max-width: 700px) {
+  .player-container {
+    padding-right: 15px;
+    min-width: 170px;
+    img {
+      width: 40px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin: 0px 0px 0px 8px;
+    }
+  }
+  .player-active {
+    transform: scale(1.32) translateX(-23px);
+  }
+
+}

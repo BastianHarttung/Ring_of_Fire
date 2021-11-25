@@ -20,11 +20,14 @@ export class StartScreenComponent implements OnInit {
 
   newGame() {
     // Start new game
+    const date = new Date().toISOString().slice(0,10)
+
     this.game = new Game();
     this.firestore.collection('games')
-      .add(this.game.toJson())
+      .doc(date)
+      .set(this.game.toJson())
       .then( (gameInfo:any) => {
-        this.router.navigateByUrl('game/'+gameInfo.id)
+        this.router.navigateByUrl('game/'+ date)
       })
   }
 
