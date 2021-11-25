@@ -49,5 +49,24 @@
   .player-active {
     transform: scale(1.32) translateX(-23px);
   }
+}
 
+@media (max-width: 450px) {
+  .player-container {
+    padding-right: 3px;
+    min-width: 120px;
+    img {
+      width: 30px;
+    }
+    p {
+      font-size: 1.1rem;
+      margin: 0px 0px 0px 5px;
+    }
+  }
+  .player-active {
+    transform: scale(1.32) translateX(-15px);
+  }
+  .user-delete-btn {
+    height: 13px;
+  }
 }

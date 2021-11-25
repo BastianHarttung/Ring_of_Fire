@@ -5,32 +5,32 @@
   <div class="card-stack">
 
     <img class="stack" *ngFor="let card of [0,1,2,3,4]; let i = index;"
-         [ngStyle]="windowWidth > 700 ?
-                { 'left.%': i/4 + 10, 'bottom.%': i/4 + 10}
-                :{ 'left.%': i/4 + 6, 'bottom.%': i/4 + 17} "
+         [ngStyle]="windowWidth > 700 ? { 'left.%': i/4 + 10, 'bottom.%': i/4 + 10}
+                    : windowWidth > 450 ? { 'left.%': i/4 + 6, 'bottom.%': i/4 + 17}
+                    : { 'left.%': i/4 + 9.75, 'bottom.%': i/4 + 28.75}"
          src="assets/img/cards/back_jokerfire.png" alt="Cards">
 
 
     <!--// Ablagestapel-->
     <img class="discard-stack "
-         [ngStyle]="windowWidth > 700 ?
-                  {'left.%': 11.25, 'bottom.%': 11.25}
-                  : {'left.%': 7.25, 'bottom.%': 18.25}"
+         [ngStyle]="windowWidth > 700 ? {'left.%': 11.25, 'bottom.%': 11.25}
+                  : windowWidth > 450 ? {'left.%': 7.25, 'bottom.%': 18.25}
+                  : {'left.%': 11, 'bottom.%': 30}"
          *ngFor=" let card of game.playedCards; let i = index;"
          src="assets/img/cards/{{game.playedCards[i]||card}}.png">
 
     <!--// Top Card zum abheben-->
-    <img class="top-card" [ngStyle]="windowWidth > 700 ?
-                  {'left.%': 11.25, 'bottom.%': 11.25}
-                  : {'left.%': 7.25, 'bottom.%': 18.25}"
+    <img class="top-card" [ngStyle]="windowWidth > 700 ? {'left.%': 11.25, 'bottom.%': 11.25}
+                  : windowWidth > 450 ? {'left.%': 7.25, 'bottom.%': 18.25}
+                  : {'left.%': 11, 'bottom.%': 30}"
          (click)="takeCard()" src="assets/img/cards/back_jokerfire.png"
          alt="Cards-Back">
 
     <!--// Karte die gelegt wird-->
     <img class="pick-card" [ngClass]="{'pick-card-animation': game.pickCardAnimation }"
-         [ngStyle]="windowWidth > 700 ?
-                  {'left.%': 11.25, 'bottom.%': 11.25}
-                  : {'left.%': 7.25, 'bottom.%': 18.25}"
+         [ngStyle]="windowWidth > 700 ? {'left.%': 11.25, 'bottom.%': 11.25}
+                  : windowWidth > 450 ? {'left.%': 7.25, 'bottom.%': 18.25}
+                  : {'left.%': 11, 'bottom.%': 30}"
          *ngIf="game.pickCardAnimation" src="assets/img/cards/{{ game.playedCard }}.png"
          alt="Card">
 
@@ -40,9 +40,9 @@
 
 
 <app-player *ngFor="let player of game.players, let i = index"
-            [ngStyle]="windowWidth >700 ?
-                        {'top.px': 120+ (i * 70) }
-                      : {'top.px': 120+ (i * 55) }"
+            [ngStyle]="windowWidth >700 ? {'top.px': 120+ (i * 70) }
+                      : windowWidth >450 ? {'top.px': 120+ (i * 55)}
+                      : {'top.px': 100+ (i * 50)}                   "
             [playerActive]="i == game.currentPlayer"
             [player]="player"
             [game]="game"
