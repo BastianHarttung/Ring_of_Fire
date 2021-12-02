@@ -1,5 +1,8 @@
 # RingOfFire
 
+A famous Drinking Game for playing with multiple Players.
+It works with Firebase to handle multiplayer Gaming.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
 ## Development server
