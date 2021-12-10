@@ -1,12 +1,15 @@
-<h1 mat-dialog-title>Je mehr desto besser :)</h1>
+<h1 mat-dialog-title>Je mehr desto <br> besser :)</h1>
 <div mat-dialog-content>
   <p>Wie ist dein Name?</p>
   <mat-form-field appearance="fill">
     <mat-label>Name</mat-label>
-    <input matInput [(ngModel)]="name">
+    <input matInput type="text" [(ngModel)]="name">
+
   </mat-form-field>
+
 </div>
-<div mat-dialog-actions>
+
+<mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Nein, Danke</button>
   <button mat-button [disabled]="name.length == 0" [mat-dialog-close]="name" cdkFocusInitial>Okay</button>
-</div>
+</mat-dialog-actions>

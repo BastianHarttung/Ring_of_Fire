@@ -18,9 +18,16 @@ export class StartScreenComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Start New Game on Click on Start-Button
+   * It takes the actual Date and Time as ISO String and pass it as
+   *    Firestore Document in Collection games and saves a
+   *    new Game with all variables in this Document
+   * Then navigate to the Game Component
+   */
   newGame() {
     // Start new game
-    const date = new Date().toISOString().slice(0,10)
+    const date = new Date().toISOString().slice(0,19)
 
     this.game = new Game();
     this.firestore.collection('games')

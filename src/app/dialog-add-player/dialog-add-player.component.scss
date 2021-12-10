@@ -12,3 +12,13 @@
   /*change color of underline when focused*/
   background-color: var(--main-color-bright) !important;;
 }
+
+.profile-pic-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-pic-container img {
+  height: 45px;
+  cursor: pointer;
+}

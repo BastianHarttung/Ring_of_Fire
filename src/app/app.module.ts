@@ -10,6 +10,8 @@ import { GameComponent } from './game/game.component';
 import { PlayerComponent } from './player/player.component';
 import { DialogAddPlayerComponent } from './dialog-add-player/dialog-add-player.component';
 import { GameDescriptionComponent } from './game-description/game-description.component';
+import { HelpComponent } from './help/help.component';
+
 
 // Material Design
 import {MatDialogModule} from '@angular/material/dialog';
@@ -28,6 +30,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import {AngularFireModule} from "@angular/fire/compat";
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +38,8 @@ import {AngularFireModule} from "@angular/fire/compat";
     GameComponent,
     PlayerComponent,
     DialogAddPlayerComponent,
-    GameDescriptionComponent
+    GameDescriptionComponent,
+    HelpComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {Game} from 'src/models/game';
 
 import {MatDialog} from '@angular/material/dialog';
@@ -15,7 +15,6 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class GameComponent implements OnInit {
 
-
   game: Game = new Game;
   gameId:string = '';
   windowWidth:number = window.innerWidth;
@@ -23,7 +22,7 @@ export class GameComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private firestore: AngularFirestore,
-              public dialog: MatDialog) {
+              public dialog: MatDialog ) {
   }
 
   ngOnInit(): void {
@@ -76,10 +75,10 @@ export class GameComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
-    dialogRef.afterClosed().subscribe((playername: string) => {   // playername ist der String, der in das Inputfeld von Dialog-add-player eingegeben wurde.
+    dialogRef.afterClosed().subscribe((playerName: any) => {   // playerName ist der String, der in das Inputfeld von Dialog-add-player eingegeben wurde.
       const randomPic = Math.round(1 + Math.random() * 3)
-      const newPlayer = {name: playername, pic: `Profile_Drunk0${randomPic}.png`}
-      if (playername && playername.length > 0) {
+      const newPlayer = {name: playerName, pic: 'Profile_Drunk0' + randomPic + '.png'}
+      if (playerName && playerName.length > 0) {
         this.game.players.push(newPlayer);
         this.saveGameToDB();
       }
