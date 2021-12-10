@@ -1,6 +1,7 @@
 # Ring Of Fire
 
-This is a multiplayer drinking-game famous in America.
+This is a multiplayer drinking-game famous in America.\
+Test the App: http://bastian-harttung.developerakademie.com/ring-of-fire/
 
 ### Start
 1. Get the Players
@@ -15,9 +16,13 @@ This is a multiplayer drinking-game famous in America.
 
 ![img.png](src/assets/img/readme/Begin.png)
 
--You can see what you have to do in the description block.
+- You can see what you have to do in the description block.
 
 ![img.png](src/assets/img/readme/Play.png)
+
+- If you want to play online with Friends. Copy web-address 
+(its like: http://bastian-harttung.developerakademie.com/ring-of-fire/game/2021-12-10T12:46:56) and 
+give it to your friends, so you can play the same game.
 
 ### Have Fun!!!!!!!!!
 
